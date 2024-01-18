@@ -1,14 +1,5 @@
 //variables for each of my h2
 
-let firstH2 = document.querySelector("#firstH2")
-
-let secondH2 = document.querySelector("#secondH2")
-
-let thirdH2 = document.querySelector("#thirdH2")
-
-// let allSocialMedia = [firstH2,secondH2,thirdH2]
-
-
 let allSocialMedia = document.querySelectorAll(".each-logo span")
 
 allSocialMedia.forEach(element => {
@@ -29,4 +20,6 @@ allSocialMedia.forEach(element => {
   }
   counting()
   })
+
+
 
