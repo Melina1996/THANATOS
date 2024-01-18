@@ -6,36 +6,27 @@ let secondH2 = document.querySelector("#secondH2")
 
 let thirdH2 = document.querySelector("#thirdH2")
 
-//LOOP for numbers
-
-//counter twitter
-
-let myNumber
+// let allSocialMedia = [firstH2,secondH2,thirdH2]
 
 
-  for (let i = 0; i < 12000; i++) {
-    setTimeout(function(){
-      firstH2.innerText = i
-    }, 1000)
+let allSocialMedia = document.querySelectorAll(".each-logo span")
+
+allSocialMedia.forEach(element => {
+  element.innerText = "0";
+
+  function counting(){
+    let maxCount = +element.getAttribute("data-target")
+    let myH2Count = +element.innerText
+
+    let increment = maxCount/200 //will increment by 200er-steps
+
+    if(myH2Count < maxCount){
+      element.innerText = Math.round(myH2Count + increment);
+      setTimeout(counting,1)
+    } else {
+      element.innerText = maxCount
+    }
   }
-
-
-//counter youtube
-
-function counterTwo(){
-  for (let i = 0; i <= 5000; i++) {
-    setTimeout(secondH2.innerText = i++,2000) 
-  }
-}
-
-
-//counter youtube
-
-function counterThree(){
-  for (let i = 0; i <= 7500; i++) {
-    setTimeout(thirdH2.innerText = i++,2000) 
-  }
-}
-
-
+  counting()
+  })
 
