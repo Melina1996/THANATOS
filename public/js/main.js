@@ -14,14 +14,14 @@ allCounters.forEach(element => {
 //for each counter I call the function here:
   function counting(){
     //target number is defined in the attribute "data-target" of each counter
-    let maxCount = +element.getAttribute("data-target")
+    let maxCount = +element.getAttribute("data-target") //"+" to make it an integer
     let myH2Count = +element.innerText
 
     let increment = maxCount/200 //will increment by 200er-steps
 
-      //if number of my counter smaller than target, my inner Text is equal to the counter
+      //if number of my counter smaller than target, "maxCount/200" is added to my number
       if(myH2Count < maxCount){
-        element.innerText = Math.round(myH2Count + increment);
+        element.innerText = Math.round(myH2Count + increment);//add 1 200er-step to my number
         setTimeout(counting,1) //time span is 1second, call function here as long as my number smaller than target
       } else { //when target reached, inner Text is assigned the target value
         element.innerText = maxCount
