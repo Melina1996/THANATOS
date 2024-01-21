@@ -11855,15 +11855,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@font-face {
-  font-family: "ShareTechMono";
-  src: url("../../../public/assets/fonts/ShareTechMono-Regular.ttf");
-}
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: ShareTechMono;
+  font-family: Share Tech Mono;
   background-color: #51e2f5;
 }
 
